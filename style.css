@@ -1,19 +1,17 @@
-/* --- Global Reset & Scroll Fix --- */
 * {
-    box-sizing: border-box; /* Includes padding in width to prevent overflow */
+    box-sizing: border-box; 
 }
 
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden; /* The "Golden Rule" to prevent horizontal scrolling */
-    scroll-behavior: smooth; /* Makes nav links slide instead of jump */
+    overflow-x: hidden; 
+    scroll-behavior: smooth; 
     
 }
 a { color: rgb(0, 0, 0); text-decoration: none; }
 
-/* --- Section Layouts --- */
 .full-height-section {
     min-height: 100vh;
     display: flex;
@@ -21,10 +19,8 @@ a { color: rgb(0, 0, 0); text-decoration: none; }
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* Remove 'position: relative' if you have it, as it can interfere */
 }
 
-/* Background Variations */
 .bg-light-alt {
     background-color: #f8f9fa;
 }
@@ -34,7 +30,6 @@ a { color: rgb(0, 0, 0); text-decoration: none; }
     color: white;
 }
 
-/* --- Navigation Styling --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -44,7 +39,6 @@ a { color: rgb(0, 0, 0); text-decoration: none; }
     width: 100%;
 }
 
-/* Ensure content isn't hidden behind the fixed navbar */
 .main-wrapper {
     padding-top: 70px; /* Adjust based on navbar height if needed */
 }
@@ -53,7 +47,6 @@ a { color: rgb(0, 0, 0); text-decoration: none; }
     transition: color 0.3s ease;
 }
 
-/* --- Card & Image Styling --- */
 .card {
     transition: transform 0.2s ease-in-out;
     border: none;
@@ -61,25 +54,22 @@ a { color: rgb(0, 0, 0); text-decoration: none; }
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Subtle lift effect for portfolio feel */
+    transform: translateY(-5px); 
 }
 
-/* Portfolio Image Constraints */
 .portfolio-img {
     max-height: 300px;
-    object-fit: contain; /* Ensures images aren't stretched or cropped */
+    object-fit: contain;
     padding: 20px;
-    background-color: #eee; /* Light gray to show image boundaries */
+    background-color: #eee; 
 }
 
-/* Headshot Styling */
 .headshot-style {
     max-width: 350px;
     height: auto;
     border: 5px solid white;
 }
 
-/* --- Text Utilities --- */
 .contact-info {
     color: #0dcaf0;
     font-weight: bold;
@@ -90,15 +80,14 @@ a { color: rgb(0, 0, 0); text-decoration: none; }
     text-decoration: underline;
 }
 
-/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .full-height-section {
-        min-height: auto; /* On small phones, let content dictate height */
+        min-height: auto; 
         padding: 80px 15px;
     }
     
     .display-3 {
-        font-size: 2.5rem; /* Shrink title for mobile screens */
+        font-size: 2.5rem; 
     }
 }
 .arrow {
@@ -106,9 +95,10 @@ a { color: rgb(0, 0, 0); text-decoration: none; }
   margin: 8% 0;
 }
 .bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+    display: inline-block; /* allow transforms to affect the element reliably */
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
